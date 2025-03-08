@@ -1,0 +1,65 @@
+.content .btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .btn .button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    border: none;
+    margin-top: 5px;
+}
+
+.content .btn .button:nth-child(2){
+    margin-left: 10px;
+}
+
+.content .btn .button:hover{
+   background-color: #08ff29;
+   color: #666; 
+}
+
+.popupmessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.popupdelete {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.popupdelete .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popupmessage.active {
+    visibility: visible;
+    opacity: 1;
+}

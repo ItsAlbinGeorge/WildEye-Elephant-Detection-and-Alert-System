@@ -1,0 +1,399 @@
+:root {
+    --main-color:#1abc9c;
+}
+body {
+    background-color: #fff; /* Set the background of the whole page to white */
+}
+
+
+
+.heading {
+    margin: 2rem;
+    padding-top:6rem;
+    display:inline-block;
+    font-size:2.2rem; 
+    color: #1abc9c;
+    position: relative;
+    letter-spacing: .2rem;
+
+}
+.heading::before,
+.heading::after{
+    content:'';
+    position: absolute;
+    width:2.5rem; 
+    height:2.5rem; 
+    border-top:.4rem solid var(--main-color);
+    border-left:.4rem solid var(--main-color);
+}
+.heading::before{
+    top:5.8rem; left:-2rem; 
+}
+.heading::after{
+    bottom:-.5rem; right:-2rem; 
+    transform:rotate(180deg);
+}
+
+.btn {
+    width:10rem; 
+    height:2.2rem; 
+    display: block;
+    background:var(--main-color); 
+    color:#fff;
+    font-size:1.1rem;
+    border-radius:3.2rem;
+    box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+    cursor:pointer;
+    border: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    margin-bottom: 5px;
+}
+.btn:hover {
+    transform: scale(1.1); /* Increases size on hover */
+    box-shadow: 0 .5rem .7rem rgba(0,0,0,.4);
+}
+
+/* home section starts  */
+
+.home {
+    margin-top: 2 rem;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(#08ff29, var(--main-color)); 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-flow: column;
+    text-align: center;
+    padding: 2rem;
+    position: relative; 
+    overflow: hidden;
+}
+
+.home .banner {
+    font-size: 3.5rem; /* Reduced for better balance */
+    color: #fff;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    max-width: 90%;
+}
+
+.home .slogan {
+    font-size: 2rem; /* Adjusted */
+    color: #eee;
+    font-weight: 400;
+}
+
+.home a button {
+    height: 3rem;
+    width: 12rem;
+    background: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    margin-top: 1rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+    border-radius: 2rem;
+    border: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.home a button:hover {
+    transform: scale(1.1); /* Increases size on hover */
+    box-shadow: 0 .5rem .7rem rgba(0,0,0,.4);
+}
+
+.home .wave {
+    position: absolute; 
+    bottom: -5rem; 
+    left: 0; 
+    width: 100%;
+    height: 8rem;
+    background: url(wave.png);
+    background-size: 50rem 8rem; 
+    background-repeat: repeat-x;
+    animation: wave 10s linear infinite;
+}
+
+.home .wave2 {
+    animation-direction: reverse;
+    opacity: .2;
+}
+
+.home .wave3 {
+    animation-duration: 4s;
+    opacity: .9;
+}
+
+.home .fa-cog {
+    position: absolute; 
+    font-size: 20rem; 
+    opacity: .15; 
+    color: #fff;
+    animation: rotate 10s linear infinite;
+}
+
+.home .nut1 {
+    top: 10%; 
+    left: -10rem;
+}
+
+.home .nut2 {
+    bottom: 23%; 
+    right: -10rem;
+    animation-direction: reverse;
+}
+
+/* about section starts  */
+.about {
+    min-height: 100vh;
+    width:100vw;
+    overflow: hidden;
+    position:relative;
+    text-align:center;
+
+}
+.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:0 4rem;
+}
+
+.about {
+    position: relative; /* Ensure positioning works for pseudo-elements */
+    background: transparent; /* Keep section background transparent */
+}
+.about .row .content {
+   text-align:left;
+}
+.about .row .image img {
+    width:50vw;
+}
+.about .row .content h3 {
+    font-size:1.8rem;
+    color:var(--main-color);
+}
+.about .row .content p {
+    font-size:1rem; 
+    color:#333;
+    padding:1rem 0;
+}
+
+.about::before,
+.about::after{
+    content:'';
+    position:absolute;
+    z-index:-1;
+    opacity:.9;   
+    border-radius:50%;
+}
+.about::before{
+     width:32rem; 
+     height:32rem;
+     background:#ccc;
+     bottom:-6.5rem; left:-3.75rem;
+}
+.about::after{
+     width:37.5rem; 
+     height:37.5rem;
+     background: linear-gradient(var(--main-color),#08ff29);
+     top:-6.25rem; right:-6.25rem;
+}
+/* about section ends  */
+
+/* services section starts  */
+.service {
+    margin-top: -2rem;
+    width:100vw; 
+    text-align:center;
+}
+.service .row {
+    margin:2rem 0; 
+    padding:0 2rem;
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+}
+.service .row .image img {
+    width:50vw; 
+    height:55vh;
+}
+
+.service .content {
+    text-align:left; 
+    padding:0 3rem;
+}
+.service .content h3 {
+    font-size:1.9rem; 
+    color:var(--main-color);
+}
+.service .content p {
+    font-size:1rem; 
+    color:#333; 
+    padding:1rem 0;
+}
+/* services section ends  */
+
+/* team section starts  */
+.team {
+    min-height: 100vh;
+    width:100vw; 
+    background: #333;
+    text-align:center;
+}
+.team .heading {
+    color:#fff;
+}
+.team .heading::before,
+.team .heading::after {
+    border-color:#fff;
+}
+.team .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.team .row .card {
+    margin:1.25rem 1.25rem;
+    width:16rem; 
+    height:22rem; 
+    background:#fff;
+    text-align: center;
+    position:relative;
+    overflow: hidden;
+    -webkit-box-reflect: below .2rem liner-gradient(transparent 70%, #0004);
+    border-radius: 10px;
+    z-index: 1;
+}
+.team .row .card::before,
+.team .row .card::after {
+    content:'';
+    position:absolute; 
+    width:9.5rem; 
+    height:9.5rem; 
+    border-radius:50%; 
+    z-index:-1;
+}
+.team .row .card::before{
+    top:-1.8rem; right:-2.5rem; 
+    background: var(--main-color);
+}
+.team .row .card::after{
+    bottom:-1.8rem; left:-2.5rem; 
+    background: #ccc 
+}
+.team .row .card .image {
+    margin:1rem 0; 
+    padding-top:2.5rem;
+}
+.team .row .card .image img {
+    width:8.2rem;
+    height:8.2rem; 
+    border:.5rem solid #fff; 
+    border-radius: 50%;
+    box-shadow:0 0 .5rem rgba(0,0,0,.3);
+    object-fit: cover;
+}
+.team .row .card .info h3{
+  font-size:1.25rem; 
+  color:#333;
+}
+.team .row .card .info span {
+    font-size:1.12rem; 
+    color:var(--main-color);
+}
+.team .row .card .info .icons a{
+    margin-top:4rem; 
+    padding:0 1rem;
+    font-size:2rem;
+    color:#333;
+}
+.team .row .card .info .icons a:hover {
+    color:var(--main-color);
+}
+/* team section ends  */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home {
+        padding: 5rem 2rem;
+    }
+    .home .banner {
+        font-size: 2.8rem;
+    }
+    .home .slogan {
+        font-size: 1.8rem;
+    }
+    .home a button {
+        width: 14rem;
+        font-size: 1.6rem;
+    }
+    .home .fa-cog {
+        font-size: 15rem;
+    }
+    .about .row {
+        flex-flow:column-reverse; 
+        padding:0 2rem;
+    }
+    .about .row .image img {
+        width:100vw;
+    }
+    .service .row {
+        flex-flow: column-reverse;
+    }
+    .service .row:nth-child(even) {
+        flex-flow: column;
+    }
+    .service .row .image img {
+        width:100%;
+    }
+    .service .row .content {
+        padding:0;
+    }
+    .service .row {
+        flex-flow: column-reverse;
+    }
+    .service .row:nth-child(even) {
+        flex-flow: column;
+    }
+    .service .row .image img {
+        width:100vh;
+    }
+    .service .row .content {
+        padding:0;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 4rem 1rem;
+    }
+    .home .banner {
+        font-size: 2.4rem;
+    }
+    .home .slogan {
+        font-size: 1.5rem;
+    }
+    .home a button {
+        width: 12rem;
+        font-size: 1.4rem;
+    }
+    .home .fa-cog {
+        font-size: 12rem;
+    }
+    .team .row .card {
+        margin:1rem 0rem;
+    }
+}
+
+/* Keyframes */
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 50rem; }
+}
+
+@keyframes rotate {
+    100% { transform: rotate(360deg); }
+}

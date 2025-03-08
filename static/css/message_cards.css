@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    min-height: 100vh;
+    margin-top: 3rem;
+}
+
+.container_body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    color: #1abc9c;
+    text-align: center;
+    padding: 15px;
+    font-size: 40px;
+}
+
+.cards{
+    width: 325px;
+    height: 450px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+
+.card_image{
+    width: 100%;
+}
+    
+.card_image img{
+    width: 100%;
+    height: auto;   
+}
+
+.content{
+    padding: 20px;    
+}
+
+.content h3{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+.content .btn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .btn .button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    font-weight: 600;
+    border: none;
+    margin-top: 5px;
+}
+
+.content .btn .button:nth-child(2){
+    margin-left: 10px;
+}
+
+.content .btn .button:hover{
+   background-color: #08ff29;
+   color: #666; 
+}
+
+.cards:hover{
+    transform: scale(1.05);
+}
+
+
+.container .popup-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.8);
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.container .popup-video video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    border-radius: 5px;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.container .popup-video span{
+    position: absolute;
+    top: 4rem;
+    right: 20px;
+    font-size: 50px;
+    color: #fff;
+    font-weight: bolder;
+    z-index: 100;
+    cursor: pointer;
+}
+
+@media (max-width:768px){
+    .container .popup-video video{
+        width: 95%;
+    }
+}
+
+.popupmessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+}
+
+.popupdelete {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.popupdelete .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popupmessage.active {
+    visibility: visible;
+    opacity: 1;
+}

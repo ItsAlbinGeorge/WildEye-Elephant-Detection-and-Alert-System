@@ -1,0 +1,298 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?familt=Heebo:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>WildEye: About Us</title>
+  </head>
+  <body>
+    <!--=============== PRELOADER ===============-->
+    <div id="preloader"></div>
+
+     <!--=============== HEADER ===============-->
+     <header class="header">
+        <nav class="nav container_header">
+            <div class="nav__data">
+                <a href="{% url 'about' %}" class="nav__logo">WildEye</a>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line nav__toggle-menu"></i>
+                    <i class="ri-close-line nav__toggle-close"></i>
+                </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li>{% if user.is_authenticated %}
+                        <a href="{% url 'landing' %}" class="nav__link">Home</a>
+                        {% else %}
+                        <a href="{% url 'home' %}" class="nav__link">Home</a>
+                        {% endif %}
+                    </li>
+                    <!--=============== DROPDOWN 1 ===============-->
+                    <li class="dropdown__item">                      
+                        <div class="nav__link dropdown__button">
+                            Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-flashlight-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Our Services</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'services' %}" class="dropdown__link">Smart Elephant Detection & Instant Alerts</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'services' %}#service2" class="dropdown__link">Web-Based Monitoring</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'services' %}#service3" class="dropdown__link">Detection History</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-book-mark-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Our Services</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'services' %}#service4" class="dropdown__link">Cross-Device Accessibility & Responsive UI</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'services' %}#service5" class="dropdown__link">User-Friendly Authentication System</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-code-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Elephant Detection</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'user_cards' %}" class="dropdown__link">History</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'user_table' %}" class="dropdown__link">Analyze Detections</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <!--=============== DROPDOWN 3 ===============-->
+                    <li class="dropdown__item">                        
+                        <div class="nav__link dropdown__button">
+                            Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-community-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">About us</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'about' %}" class="dropdown__link">About us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'team' %}" class="dropdown__link">Our Team</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}" class="dropdown__link">Contact us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-shield-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Safety and quality</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'terms' %}" class="dropdown__link">Terms and Conditions</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'logout' %}" class="nav__link">Logout</a>
+                        {% else %}
+                            <a href="{% url 'user_login' %}" class="nav__link">Login</a>
+                        {% endif %}
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="dropdown__item">                        
+                        <div class="nav__link dropdown__button">
+                            Hi, {{user.first_name}} <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        </div>
+
+                        <div class="dropdown__container">
+                            <div class="dropdown__content">
+                                <div class="dropdown__group">
+                                    <div class="dropdown__icon">
+                                        <i class="ri-community-line"></i>
+                                    </div>
+
+                                    <span class="dropdown__title">Account</span>
+
+                                    <ul class="dropdown__list">
+                                        <li>
+                                            <a href="{% url 'change_password' %}" class="dropdown__link">Change Password</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'logout' %}" class="dropdown__link">Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'home' %}" class="nav__link">Hi, Guest</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="about" style="font-family: 'Poppins', sans-serif; font-size:62.5%;" id="about">
+        
+        <h1 class="heading">About Us</h1>
+
+        <div class="row">
+            
+            <div class="content">
+                <h3>Smart Detection, Timely Alerts</h3>
+                <p>WildEye is an AI-driven elephant detection system that leverages YOLOv8 to identify elephants in real time and send instant email alerts. Designed to enhance human-wildlife coexistence, WildEye provides a reliable and efficient solution to mitigate conflicts and promote conservation efforts.</p>
+                <a href="{% url 'user_register' %}"><button class="btn">Register Now</button></a>
+            </div>
+
+            <div class="image">
+                <img src="{% static 'images/about.svg' %}" alt="">
+            </div>
+
+        </div> 
+
+    </section>
+
+    <footer>
+        <div class="container_footer">
+            <div class="wrapper">
+                <div class="footer-widget">
+                    
+                        <!--<img src="" alt="" class="logo">-->
+                        <h2 class="logo">WildEye</h2>
+                    
+                    <p class="desc">
+                        Your sentinel for safer surroundings.
+                    </p>
+                    <ul class="socials">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i></fa-facebook-f></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i></fa-facebook-f></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i></fa-facebook-f></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></fa-facebook-f></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-widget">
+                    <h6>Quick Links</h6>
+                    <ul class="links">
+                        <li>{% if user.is_authenticated %}
+                            <a href="{% url 'landing' %}">Home</a>
+                            {% else %}
+                            <a href="{% url 'home' %}">Home</a>
+                            {% endif %}
+                        </li>
+                        <li><a href="{% url 'user_login' %}">Login</a></li>
+                        <li><a href="{% url 'user_register' %}">Register</a></li>
+                        <li>{% if user.is_authenticated %}
+                            <a href="{% url 'change_password' %}">Change Password</a>
+                            {% else %}
+                            <a href="{% url 'forgot_password' %}">Forgot Password</a>
+                            {% endif %}
+                        </li>
+                        <!--<li><a href="#">Contact</a></li>-->
+                    </ul>
+                </div>
+                
+                <div class="footer-widget">
+                    <h6>About</h6>
+                    <ul class="links">
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'team' %}">Our Team</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                    </ul>
+                </div>
+
+                <div class="footer-widget">
+                    <h6>Services</h6>
+                    <ul class="links">
+                        <li><a href="{% url 'user_cards' %}">Detection History</a></li>
+                        <li><a href="{% url 'user_table' %}">Analyze Detections</a></li>
+                        <li><a href="{% url 'terms' %}">Terms and Conditions</a></li>
+                        <!--<li><a href="">Testimonial</a></li>
+                        <li><a href="">Contact</a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright-wrapper">
+                <p>Design and developed by <a href="{% url 'team' %}"><b>Graphics Concepts</b></a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/header.js' %}"></script>
+    <script src="{% static 'js/preloader.js' %}"></script>
+  </body>
+</html>
