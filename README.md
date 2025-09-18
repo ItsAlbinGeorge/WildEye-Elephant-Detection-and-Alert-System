@@ -64,6 +64,57 @@ The YOLOv8 model used for elephant detection achieved the following performance 
 ![Training & Validation Loss](train/results.png) <!-- Replace with your training/validation plot image path -->
 
 ---
+## Screenshots of the System
+
+### Home Page
+![Home Page](Screenshots/home.png)
+
+### Login Page
+![Login Page](Screenshots/login.png)
+
+### Register Page
+![Register Page](Screenshots/register.png)
+
+### About Page
+![About Page](Screenshots/about.png)
+
+### Contact Page
+![Contact Page](Screenshots/contact.png)
+
+### Cards Section
+![Cards](Screenshots/cards.png)
+
+### Header and Footer
+![Header & Footer](Screenshots/headerfooter.png)
+
+### Controls
+![Controls](Screenshots/controls.png)
+
+### Messages
+![Messages](Screenshots/messages.png)
+
+### Popup
+![Popup](Screenshots/popup.png)
+
+### Responsive Layout
+![Responsive](Screenshots/responsive.png)
+
+### Services Section
+![Services](Screenshots/service.png)
+
+### Slider
+![Slider](Screenshots/slider.png)
+
+### Table
+![Table](Screenshots/table.png)
+
+### Team
+![Team](Screenshots/team.png)
+
+### Users
+![Users](Screenshots/users.png)
+
+---
 
 ## 🛠 Installation  
 
