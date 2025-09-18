@@ -114,6 +114,9 @@ The YOLOv8 model used for elephant detection achieved the following performance 
 ### Users
 ![Users](Screenshots/users.png)
 
+### Email Alert
+![Email alert](Screenshots/Mail.png)
+
 ---
 
 ## 🛠 Installation  
